@@ -1,0 +1,48 @@
+		
+	obj instanceof Bee
+		
+	比较两个类实例是否相同，返回boolean
+		
+		
+	JPanel不是顶级窗口，不能直接输出。它必须放在象JFrame这样的顶级窗口上才能输出。
+		
+	JcontentPane实际上就是一个JPanel。JFrame中会默认new一个JPanel，塞入JFrame中。
+	
+	JPanel可以放在JFrame中，但是反过来就是不行的！效果上没什么特大的区别~！
+	
+	JFrame用来做主页面框架，JPanel只是普通页面 
+	
+	JPanel可以放在JFrame中，反之不行.
+	
+	JFrame   可以看成,最底级容器,可以包括其他上级容器包括JPanel
+	
+	JFrame只是一个界面，也就是个框架，要想把控件放在该界面中，必须把控件放在JPanel中，
+然后再把JPanel放在JFrame中，JPanel作为一个容器使用。
+		
+		JFrame(框架) <-- JPanel(容器面板)
+		
+		类继承JPanel
+		
+		//创建窗体对象    
+		//JFrame("标题");
+		JFrame frame = new JFrame("PlaneFighting");
+		
+		World world = new World();
+		
+		//只能add继承了JPanel的类
+		frame.add(world);
+		
+		//设置窗口关闭操作
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		//窗口尺寸
+		frame.setSize(500, 500);
+		//居中显示
+		frame.setLocationRelativeTo(null);
+		
+		//先设置大小  再设置位置！！！
+		
+		
+		
+		//窗口显示
+		frame.setVisible(true);
